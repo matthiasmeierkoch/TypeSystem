@@ -1,8 +1,13 @@
 // reset css
 @import url("~normalize.css/normalize.css");
+
+// Load Font
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+// import typography
 @import "./scss/typography";
 
+// media queries
 @media only screen and (min-width: 768px) { /* oder rem/em */
   html {
     font-size: 18px;
@@ -15,6 +20,38 @@
   }
 }
 
+// classes and id's
+#title {
+  margin-top: 100px;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  td{
+    padding: 0.3rem;
+  }
+
+  th {
+    text-align: left;
+  }
+}
+
+.tabelle {
+  overflow-x: auto;
+}
+
+
+// Grid and Container
 $col: 12;
 $gutter: 3;
 $total-breite: 100;
@@ -81,29 +118,4 @@ $col-1of8: (100 - ((8 - 1) * $gutter)) / 8;
   max-width: 40rem;
   margin: 0 auto;
   padding: 0 2.5%;
-}
-
-img {
-  max-width: 100%;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-
-  td{
-    padding: 0.3rem;
-  }
-
-  th {
-    text-align: left;
-  }
-}
-
-.tabelle {
-  overflow-x: auto;
 }
